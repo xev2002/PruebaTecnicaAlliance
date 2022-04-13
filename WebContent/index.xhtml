@@ -1,0 +1,22 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html">
+<h:head>
+<title>Prueba</title>
+</h:head>
+<body>
+	<h1>Prueba de conocimiento</h1>
+		<h:form>
+			<h:outputLabel  value="Introduce un texto: " for="textEvaluate"/>&nbsp;			
+			<h:inputTextarea id="textEvaluate" value="#{TextoBean.texto}" style="width: 400px; height: 300px"/>	
+			<br/><br/>
+			<h:commandButton value="Enviar" action="#{TextoBean.mostrarResultado()}"/>
+			<h:commandButton value="Limpiar" action="#{TextoBean.limpiarTodo()}"/>
+			<br/><br/>
+			<h:outputLabel value="#{TextoBean.label}" for="result"/>&nbsp;
+			<h:inputTextarea id="result" value="#{TextoBean.resultado}" disabled="true"  style="width: 400px; height: 300px"/>				
+		</h:form>
+</body>
+</html>
